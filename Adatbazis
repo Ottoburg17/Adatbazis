@@ -1,0 +1,26 @@
+CREATE DATABASE halozat
+DEFAULT CHARACTER SET utf8
+COLLATE UTF8_hungarian_ci;
+
+CREATE TABLE megallok 
+  id INT NOT NULL,
+  nev varchar (20),
+  CONSTAINT pk_megallok Primary key(id);
+
+
+SELECT jaratSzam FROM jaratok WHERE elsoAjtos ="felszallasirend"
+
+
+
+SELECT nev
+FROM megallok
+WHERE nev = "setany%"
+ORDER BY nev;
+
+
+
+SELECT megallo,jaratszam
+FROM halozat
+INNER JOIN jaratok ON halozat.jarat= jaratok.jaratSzam 
+WHERE jarat > 3;
+
